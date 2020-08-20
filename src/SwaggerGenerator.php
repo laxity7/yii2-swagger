@@ -1,6 +1,6 @@
 <?php
 
-namespace laxity7\swagger;
+namespace laxity7\yii2\gendoc;
 
 /**
  * Class SwaggerGenerator generates Swagger API docs from the given controllers.

@@ -1,6 +1,6 @@
 <?php
 
-namespace laxity7\swagger;
+namespace laxity7\yii2\gendoc;
 
 use yii\base\Object;
 use yii\base\UnknownPropertyException;

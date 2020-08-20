@@ -3,7 +3,7 @@
  * Created by Vlad Varlamov (laxity.ru) on 21.03.2017.
  */
 
-namespace laxity7\swagger;
+namespace laxity7\yii2\gendoc;
 
 trait LogTrait
 {
