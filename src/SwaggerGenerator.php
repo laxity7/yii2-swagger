@@ -77,7 +77,7 @@ class SwaggerGenerator extends SwaggerObject
 	public $inputDirs = ['@app/controllers'];
 
 	/** @var string Only parse php files which contain the given string */
-	public $filterByName;
+	public $filterByName = '/\.php/';
 
 	/** @var string Base api path to which resources paths will be appended. E.g /api */
 	public $baseApiPath = '';
@@ -92,7 +92,7 @@ class SwaggerGenerator extends SwaggerObject
 
 	public $viewConfig = [
 		'layout' => '',
-	    'title' => ''
+		'title'  => '',
 	];
 
 	/** @var Application Object representing API structure */
@@ -178,7 +178,9 @@ class SwaggerGenerator extends SwaggerObject
 		foreach (static::$simpleTypes as $canonical => $typeNames) {
 			if (is_array($typeNames) && in_array($type, $typeNames)) {
 				return $isArray ? ['type' => 'array', 'items' => ['type' => $canonical]] : ['type' => $canonical];
-			} elseif (is_string($typeNames) && $type === $typeNames) {
+			}
+
+			if (is_string($typeNames) && $type === $typeNames) {
 				return $isArray ? ['type' => 'array', 'items' => ['type' => $typeNames]] : ['type' => $typeNames];
 			}
 		}
@@ -217,7 +219,9 @@ class SwaggerGenerator extends SwaggerObject
 		foreach ($dir as $item) {
 			if ($item->isDot()) {
 				continue;
-			} elseif ($item->isFile()) {
+			}
+
+			if ($item->isFile()) {
 				$this->parseFile($item);
 			} elseif ($item->isDir()) {
 				$this->parseDir($item);
@@ -290,7 +294,6 @@ class SwaggerGenerator extends SwaggerObject
 
 	public function parseTagsTag($text)
 	{
-
 	}
 
 }

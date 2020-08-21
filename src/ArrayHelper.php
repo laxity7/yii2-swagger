@@ -24,7 +24,9 @@ class ArrayHelper
 			}
 
 			return $object;
-		} elseif (is_object($object)) {
+		}
+
+		if (is_object($object)) {
 			$result = [];
 			foreach ($object as $key => $value) {
 				if (is_array($value)) {
@@ -41,8 +43,8 @@ class ArrayHelper
 			}
 
 			return $result;
-		} else {
-			return [$object];
 		}
+
+		return [$object];
 	}
 }
