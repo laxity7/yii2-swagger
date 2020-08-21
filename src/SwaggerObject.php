@@ -2,10 +2,10 @@
 
 namespace laxity7\yii2\gendoc;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\base\UnknownPropertyException;
 
-class SwaggerObject extends Object implements LogInterface
+class SwaggerObject extends BaseObject implements LogInterface
 {
 	use LogTrait;
 
