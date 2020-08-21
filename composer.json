@@ -15,7 +15,7 @@
 	"require": {
 		"php": ">=7.1.0",
 		"yiisoft/yii2": "2.0.*",
-		"yiisoft/yii2-apidoc": "2.*",
+		"yiisoft/yii2-apidoc": "^2.1.5",
 		"ext-json": "*"
 	},
 	"config": {
