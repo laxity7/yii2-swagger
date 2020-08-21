@@ -23,7 +23,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"laxity7\\yii2\\gendoc\\": ""
+			"laxity7\\yii2\\gendoc\\": "src"
 		}
 	}
 }
